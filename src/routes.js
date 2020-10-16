@@ -17,7 +17,7 @@ router.post('/user/signup', AuthController.signup);
 router.get('/user/me', UserController.info);
 router.put('/user/me', UserController.editAction);
 
-router.get('/categories', UserController.getCategories);
+router.get('/categories', AdsController.getCategories);
 
 router.post('/ad/add', AdsController.addAction);
 router.get('/ad/list', AdsController.getList);
