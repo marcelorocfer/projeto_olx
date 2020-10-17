@@ -24,5 +24,18 @@ module.exports = {
             notEmpty: true,
             errorMessage: 'O estado deve ser enviado.'
         }
+    }),
+    signin: checkSchema({
+        email: {
+            isEmail: true,
+            normalizeEmail: true,
+            errorMessage: 'E-mail inválido.'
+        },
+        password: {
+            isLength: {
+                options: { min: 4 }
+            },
+            errorMessage: 'A senha deve ter pelo menos 4 caracteres.'
+        }
     })
 };
