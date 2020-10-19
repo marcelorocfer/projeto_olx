@@ -56,7 +56,7 @@ module.exports = {
             return;
         }
 
-        // Verifica se o e-mail já existe.
+        // Verifica se o estado já existe.
 
         if(mongoose.Types.ObjectId.isValid(data.state)) {
             const stateItem = await State.findById(data.state);
